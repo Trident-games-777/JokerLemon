@@ -17,7 +17,7 @@ class StartScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start_screen)
         val lemonViewModel = ViewModelProvider(this)[LemonViewModel::class.java]
 
-        if (!Settings.game(this)) {
+        if (Settings.game(this)) {
             go()
         } else {
             if (lemonViewModel.isDataInDb()) {
