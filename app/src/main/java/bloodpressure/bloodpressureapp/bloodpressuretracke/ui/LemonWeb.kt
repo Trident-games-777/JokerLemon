@@ -4,9 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Message
+import android.util.Log
 import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import bloodpressure.bloodpressureapp.bloodpressuretracke.R
 import bloodpressure.bloodpressureapp.bloodpressuretracke.data.models.LemonData
@@ -33,7 +35,7 @@ class LemonWeb : AppCompatActivity() {
         setContentView(R.layout.lemon_web)
 
         webView = findViewById(R.id.webView)
-        webView.loadUrl(intent.getStringExtra(DATA_EXTRA)!!)
+        webView.loadUrl("https://${intent.getStringExtra(DATA_EXTRA)!!}")
         webView.webViewClient = LocalClient()
         webView.settings.javaScriptEnabled = true
         CookieManager.getInstance().setAcceptCookie(true)
@@ -103,7 +105,7 @@ class LemonWeb : AppCompatActivity() {
         override fun onPageFinished(view: WebView?, url: String?) {
             super.onPageFinished(view, url)
             lifecycleScope.launch {
-                repository.saveLemonData(LemonData(data = url!!))
+                repository.saveLemonData(LemonData(data = "https://${url!!}"))
             }
         }
     }
