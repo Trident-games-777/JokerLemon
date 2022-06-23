@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="bloodpressure.bloodpressureapp.bloodpressuretracke">
+
+    <application
+        android:name=".LemonApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/avatar"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/avatar_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JokerLemon"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/fb_client_token" />
+
+        <activity
+            android:name=".ui.LemonWeb"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".game.JokerLemon"
+            android:exported="false" />
+        <activity
+            android:name=".ui.StartScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">JokerLemon</string>
+    <string name="go_it">Go it</string>
+    <string name="yeah">Yeah</string>
+
+    <string name="fb_app_id">5402772106474035</string>
+    <string name="fb_client_token">e1cf37ed392d3fdc2034ee460d2e119f</string>
+
+    <string name="str">darinamonkey.xyz/ .php</string>
+
+    <string name="secure_get_parametr">DJ1NA1akTy</string>
+    <string name="secure_key">9sehQmWuQS</string>
+    <string name="dev_tmz_key">MKXBTBXjaa</string>
+    <string name="gadid_key">dVoxC9Lfii</string>
+    <string name="deeplink_key">TGf2mYaSB2</string>
+    <string name="source_key">DpPAWorocD</string>
+    <string name="af_id_key">KE1wy7BCiy</string>
+    <string name="ad_id_key">FnRxB77S2q</string>
+    <string name="adset_id_key">Mb9Jz9Tftq</string>
+    <string name="campaign_id_key">QwFpMUQ7vZ</string>
+    <string name="app_campaign_key">rw1CL4zF9L</string>
+    <string name="adset_key">4GOLCmj0y5</string>
+    <string name="adgroup_key">WpDLJ5OSJN</string>
+    <string name="orig_cost_key">w1l61TaAk0</string>
+    <string name="af_siteid_key">ZW5LdSr591</string>
+
+</resources>
