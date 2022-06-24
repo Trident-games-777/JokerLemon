@@ -50,6 +50,7 @@ class LemonViewModel @Inject constructor(
                             val gadid = withContext(Dispatchers.Default) {
                                 AdvertisingIdClient.getAdvertisingIdInfo(application).id.toString()
                             }
+                            OneSignal.setExternalUserId(gadid)
                             val data = "https://" + buildData(
                                 res = application.resources,
                                 aData = aData,
